@@ -28,3 +28,11 @@ Para la implementación de las bases de datos se pueden usar:
 -  Apache Cassandra: Cassandra Driver.
 -  Amazon Redshift: Amazon Redshift SQL Workbench/Web.
 
+# Contenidos
+
+- [Base de datos]()
+- [Código de Amazon Redshift]()
+- [Código de Apache Cassandra]()
+- [Artículo](https://www.overleaf.com/read/zyvwwnmwkjhw)
+- [Presentación]()
+
