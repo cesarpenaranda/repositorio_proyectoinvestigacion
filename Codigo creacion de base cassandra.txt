@@ -1,0 +1,17 @@
+#No correr lo que esta comentado ni correr todo de una vez
+#Para crear la base utilizamos el siguiente codigo
+
+CREATE KEYSPACE IF NOT EXISTS tu_base_de_datos WITH replication = { 'class': 'SimpleStrategy', 'replication_factor': 1 };
+
+#Para usar la base
+USE tu_base_de_datos;
+
+#Para crear la tabla segun los datos brindados
+CREATE TABLE IF NOT EXISTS ventas (row_id INT, order_id TEXT, order_date DATE, ship_date DATE, ship_mode TEXT, customer_id TEXT, customer_name TEXT, segment TEXT, country TEXT, city TEXT, state TEXT, postal_code INT, region TEXT, product_id TEXT, category TEXT, sub_category TEXT, product_name TEXT, sales DECIMAL, quantity INT, discount DECIMAL, profit DECIMAL, PRIMARY KEY(row_id) );
+
+#Para verificar la creacion de la misma
+DESCRIBE TABLE ventas;
+
+#Para verificar de nuevo
+USE tu_base_de_datos;
+SELECT * FROM ventas LIMIT 5;
