@@ -1,0 +1,2 @@
+Referencia de la base de datos: 
+Martin, S. (2017). Sample - Superstore Sales. Tableau. Consultado el 4 de octubre de 2023. https://community.tableau.com/s/question/0D54T00000CWeX8SAL/sample-superstore-sales-excelxls
