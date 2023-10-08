@@ -7,7 +7,16 @@ CREATE KEYSPACE IF NOT EXISTS tu_base_de_datos WITH replication = { 'class': 'Si
 USE tu_base_de_datos;
 
 #Para crear la tabla segun los datos brindados
-CREATE TABLE IF NOT EXISTS ventas (row_id INT, order_id TEXT, order_date DATE, ship_date DATE, ship_mode TEXT, customer_id TEXT, customer_name TEXT, segment TEXT, country TEXT, city TEXT, state TEXT, postal_code INT, region TEXT, product_id TEXT, category TEXT, sub_category TEXT, product_name TEXT, sales DECIMAL, quantity INT, discount DECIMAL, profit DECIMAL, PRIMARY KEY(row_id) );
+
+#Segun intentos de subir el csv
+#Intento 1
+CREATE columnfamily IF NOT EXISTS ventas (row_id INT PRIMARY KEY, order_id VARCHAR, order_date VARCHAR, ship_date VARCHAR, ship_mode VARCHAR, customer_id VARCHAR, customer_name VARCHAR, segment VARCHAR, country VARCHAR, city VARCHAR, state VARCHAR, postal_code INT, region VARCHAR, product_id VARCHAR, category VARCHAR, sub_category VARCHAR, product_name VARCHAR, sales FLOAT, quantity INT, discount FLOAT, profit FLOAT );
+
+#intento 2
+CREATE table IF NOT EXISTS ventas (row_id INT PRIMARY KEY, order_id VARCHAR, order_date VARCHAR, ship_date VARCHAR, ship_mode VARCHAR, customer_id VARCHAR, customer_name VARCHAR, segment VARCHAR, country VARCHAR, city VARCHAR, state VARCHAR, postal_code INT, region VARCHAR, product_id VARCHAR, category VARCHAR, sub_category VARCHAR, product_name VARCHAR, sales FLOAT, quantity INT, discount FLOAT, profit FLOAT );
+
+#intento3#
+CREATE table IF NOT EXISTS ventas (row_id VARCHAR PRIMARY KEY, order_id VARCHAR, order_date VARCHAR, ship_date VARCHAR, ship_mode VARCHAR, customer_id VARCHAR, customer_name VARCHAR, segment VARCHAR, country VARCHAR, city VARCHAR, state VARCHAR, postal_code VARCHAR, region VARCHAR, product_id VARCHAR, category VARCHAR, sub_category VARCHAR, product_name VARCHAR, sales VARCHAR, quantity VARCHAR, discount VARCHAR, profit VARCHAR );
 
 #Para verificar la creacion de la misma
 DESCRIBE TABLE ventas;
@@ -17,3 +26,14 @@ USE tu_base_de_datos;
 
 #Otra manera de verificar
 SELECT * FROM ventas LIMIT 5;
+
+
+#Intentos de insertar el csv por comando
+#insertar csv
+COPY ventas(row_id, order_id, order_date, ship_date, ship_mode, customer_id, customer_name, segment, country, city, state, postal_code, region, product_id, category, sub_category, product_name, sales, quantity, discount, profit) FROM 'VentasElectronicos.csv' WITH delimiter =',' and HEADER = TRUE; 
+
+#Prueba pequena
+USE tu_base_de_datos;
+COPY ventas(row_id) FROM 'VentasElectronicos.csv' WITH delimiter =',' and HEADER = TRUE; 
+
+
