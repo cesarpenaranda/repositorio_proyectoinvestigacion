@@ -4,7 +4,7 @@
 - [Iván Daniel Rodríguez Cruz, C09204](https://github.com/ivanrodc)
 - [Cesar Peñaranda Chaves, B85922]()
 - [Joseph Elí Rivera Noguera, C06523]()
-- [Luis Carlos González, XXXXX]()
+- [Luis Carlos González, B83415]()
 - [Andrea Sánchez Corella, C07226]()
 
 ## Descripción del trabajo
