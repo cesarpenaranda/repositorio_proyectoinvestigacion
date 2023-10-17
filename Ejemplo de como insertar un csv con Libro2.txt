@@ -1,0 +1,18 @@
+# La base Libro2 esta en la carpeta datos
+# No correr lo que esta comentado ni correr todo de una vez
+# Para crear la base utilizamos el siguiente codigo
+CREATE KEYSPACE IF NOT EXISTS tu_base_de_datos WITH replication = { 'class': 'SimpleStrategy', 'replication_factor': 1 };
+
+# Para usar la base importante correr siempre esta linea
+USE tu_base_de_datos;
+
+# Para crear la tabla segun los datos brindados
+create table test_csv_import(car_make text,car_model text,start_year int,id int,first_name text,last_name text,departmen text,PRIMARY KEY(car_make,car_model,start_year,id));
+
+
+# Para insertar los datos
+# IMPORTANTE meter la carpeta libro2 a la carpeta bin de cassandra del disco c para que este la encuentre
+copy test_csv_import(car_make,car_model,start_year,id,first_name,last_name,departmen) from 'Libro2.csv' with delimiter=';' and header=true;
+
+# Consulta de verificacion
+select * from test_csv_import;

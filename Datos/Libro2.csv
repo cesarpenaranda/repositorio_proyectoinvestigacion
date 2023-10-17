@@ -1,0 +1,14 @@
+car_make;car_model;start_year;id;first_name;last_name;department
+BMW;Saloon;2011;1;Johnny;Depp;IT
+AUDI;Saloon;2013;2;Meryl;Streep;HR
+LEXUS;Sports;2011;3;Brad;Pitt;IT
+AUDI;Sports;2012;4;Tom;Hanks;FI
+BMW;Compact;2012;5;Angelina;Jolie;FI
+BMW;Saloon;2011;6;Tom;Cruise;HR
+AUDI;Compact;2013;7;Scarlett;Johansson;IT
+LEXUS;Compact;2013;8;Matt;Damon;IT
+NISSAN;Saloon;2013;9;Julia;Roberts;FI
+BMW;Saloon;2011;10;Nicole;Kidman;HR
+NISSAN;Compact;2012;11;George;Clooney;HR
+AUDI;Saloon;2012;12;Dwayne;Johnson;IT
+AUDI;Sports;2011;13;Natalie;Portman;FI

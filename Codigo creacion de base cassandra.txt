@@ -1,19 +1,29 @@
-#No correr lo que esta comentado ni correr todo de una vez
-#Para crear la base utilizamos el siguiente codigo
+# No correr lo que esta comentado ni correr todo de una vez
+# Para crear la base utilizamos el siguiente codigo
 
 CREATE KEYSPACE IF NOT EXISTS tu_base_de_datos WITH replication = { 'class': 'SimpleStrategy', 'replication_factor': 1 };
 
-#Para usar la base
+# Para usar la base importante correr siempre esta linea
+
 USE tu_base_de_datos;
 
-#Para crear la tabla segun los datos brindados
-CREATE TABLE IF NOT EXISTS ventas (row_id INT, order_id TEXT, order_date DATE, ship_date DATE, ship_mode TEXT, customer_id TEXT, customer_name TEXT, segment TEXT, country TEXT, city TEXT, state TEXT, postal_code INT, region TEXT, product_id TEXT, category TEXT, sub_category TEXT, product_name TEXT, sales DECIMAL, quantity INT, discount DECIMAL, profit DECIMAL, PRIMARY KEY(row_id) );
+# Para crear la tabla segun los datos brindados
+CREATE table ventas (row_id INT, order_id TEXT, order_date TEXT, ship_date TEXT, ship_mode TEXT, customer_id TEXT, customer_name TEXT, segment TEXT, country TEXT, city TEXT, state TEXT, postal_code INT, region TEXT, product_id TEXT, category TEXT, sub_category TEXT, product_name TEXT, sales FLOAT, quantity INT, discount FLOAT, profit FLOAT,PRIMARY KEY(row_id));
 
-#Para verificar la creacion de la misma
+# Para verificar la creacion de la misma
 DESCRIBE TABLE ventas;
 
-#Para verificar de nuevo
-USE tu_base_de_datos;
-
-#Otra manera de verificar
+# Otra manera de verificar
 SELECT * FROM ventas LIMIT 5;
+
+# Insertar el csv por comando 
+# IMPORTANTE meter el csv VentasElectronicas a las carpeta bin dentro de la carpeta cassandra den el disco c para que el programa lo pueda encontrar luego correr el siguiente comando
+
+COPY ventas(row_id, order_id, order_date, ship_date, ship_mode, customer_id, customer_name, segment, country, city, state, postal_code, region, product_id, category, sub_category, product_name, sales, quantity, discount, profit) FROM 'VentasElectronicos.csv' WITH delimiter =';' and HEADER = TRUE; 
+
+#Consultas de verificacion
+SELECT city FROM ventas LIMIT 5; 
+SELECT * FROM ventas LIMIT 5;
+
+# Si se observa raro es porque son demaciadas columnas para visualizarlo mejor prescionar ctrl+- hasta que se observe mas mejor
+

@@ -1,0 +1,24 @@
+CREATE TABLE "public"."Ventas_1"(
+    "Row ID" INTEGER NULL,
+    "Order ID" VARCHAR NULL,
+    "Order Date" DATE NULL,
+    "Ship Date" DATE NULL,
+    "Ship Mode" VARCHAR NULL,
+    "Customer ID" VARCHAR NULL,
+    "Customer Name" VARCHAR NULL,
+    "Segment" VARCHAR NULL,
+    "Country" VARCHAR NULL,
+    "City" VARCHAR NULL,
+    "State" VARCHAR NULL,
+    "Postal Code" INTEGER NULL,
+    "Region" VARCHAR NULL,
+    "Product ID" VARCHAR NULL,
+    "Category" VARCHAR NULL,
+    "SubCategory" VARCHAR NULL,
+    "Product Name" VARCHAR NULL,
+    "Sales" DOUBLE PRECISION NULL,
+    "Quantity" INTEGER NULL,
+    "Discount" REAL NULL,
+    "Profit" DOUBLE PRECISION NULL
+) ENCODE AUTO;
+
