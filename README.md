@@ -17,8 +17,8 @@ Un comercio de electrónicos, por ejemplo ExtremeTech, dada sus características
 - [Artículo](https://www.overleaf.com/9228858123bmkdyzgggknr)
 - [Presentación]()
 - [Base de datos](https://github.com/cesarpenaranda/repositorio_proyectoinvestigacion/tree/main/Datos)
-- [Código de Amazon Redshift]()
-- [Código de Apache Cassandra]()
+- [Código de Amazon Redshift](https://github.com/cesarpenaranda/repositorio_proyectoinvestigacion/blob/main/C%C3%B3digo%20tabla%20Redshift)
+- [Código de Apache Cassandra](https://github.com/cesarpenaranda/repositorio_proyectoinvestigacion/blob/main/Codigo%20creacion%20de%20base%20cassandra.txt)
 
 ## Licencias
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)

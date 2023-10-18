@@ -1,3 +1,6 @@
+# Este código es el que genera el sistema de Amazon Redshift cuando se le intentó subir la base de datos. 
+# Fue el mismo código que se utilizó en la cuenta de Joseph e Iván.
+
 CREATE TABLE "public"."Ventas_1"(
     "Row ID" INTEGER NULL,
     "Order ID" VARCHAR NULL,
